@@ -25,3 +25,6 @@ url = "https://www.linkedin.com/in/garethgeorge97"
     weight = 0
     url = "/posts"
 
+[markup.goldmark.renderer]
+unsafe= true
+
