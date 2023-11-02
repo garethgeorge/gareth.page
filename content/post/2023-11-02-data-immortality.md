@@ -3,7 +3,7 @@ title = "Data Immortality"
 date = "2021-08-01"
 description = ""
 tags = [
-  "js",
+  "misc",
 ]
 +++
 

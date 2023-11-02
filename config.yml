@@ -1,0 +1,75 @@
+baseURL: 'https://gareth.page/'
+languageCode: 'en-us'
+title: 'gareth.page'
+theme: 'PaperMod'
+
+minify:
+  disableXML: true
+
+enableRobotsTXT: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+languages:
+  en:
+    languageName: "English"
+    weight: 1
+    taxonomies:
+      tag: tags
+    menu:
+      main:
+        - name: Archive
+          url: post/
+          weight: 5
+        # - name: Search
+        #   url: search/
+        #   weight: 10
+        - name: Tags
+          url: tags/
+          weight: 10
+
+params:
+  env: production
+  author: garethgeorge
+  defaultTheme: auto
+  ShowShareButtons: true
+  ShowReadingTime: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowToc: true
+
+  profileMode:
+    enabled: false
+
+  homeInfoParams:
+    Title: "gareth.page"
+    Content: >
+      gareth george's dev blog hosting my musings about building things with and without code.
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/garethgeorge/"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/garethgeorge97/"
+    - name: Rss
+      url: "index.xml"
+
+  editPost:
+    URL: "https://github.com/garethgeorge/gareth.page/tree/main/content"
+    Text: "Suggest Changes" # edit text
+    appendFilePath: true # to append file path to Edit link
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys: ["title", "permalink", "summary", "content"]

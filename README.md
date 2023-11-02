@@ -13,3 +13,9 @@ git submodule init
 git submodule update
 hugo serve
 ```
+
+## Posts Todo
+
+ - making data immortal
+ - adventures with fuse
+
