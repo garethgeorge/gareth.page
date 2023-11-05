@@ -14,6 +14,11 @@ outputs:
     - RSS
     - JSON
 
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
 languages:
   en:
     languageName: "English"
