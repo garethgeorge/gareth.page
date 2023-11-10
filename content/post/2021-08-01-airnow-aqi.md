@@ -45,17 +45,9 @@ No nice simple one-liner formulas here. To my surprise, the AQI is a non-linear 
 | 300 | 350.4 | 424.0 |
 | 400 | 500.4 | 504.0 |
 
-To compute the AQI value, one first finds the pair of values in the table that bracket the PM2.5 and PM10 values. Then, the AQI is computed by linearly interpolating between the two bracketing values. For example, if the PM2.5 value is 20 and the PM10 value is 15 then the AQI is computed as follows:
+To compute the AQI value, one first finds the pair of values in the table that bracket the PM2.5 and PM10 values. Then, the AQI is computed by linearly interpolating between the two bracketing values.
 
-```txt
-AQI_{particulate type} = (AQI_high - AQI_low)/(PM_high - PM_low) * (PM - PM_low) + AQI_low
-AQI_2.5 = (50 - 0)/(12.0 - 0.0) * (20 - 0.0) + 0 = 83.3
-AQI_10 = (50 - 0)/(54.0 - 0.0) * (15 - 0.0) + 0 = 13.9
-```
-
-The raw AQI value is then simply the worse of the two! In this case that is `MAX(AQI_2.5, AQI_10) = 83.3` which is our final AQI.
-
-### As JavaScript
+### AQI calculation in JavaScript
 
 See package on [GitHub](https://github.com/garethgeorge/airnow-aqi-js/tree/master)
 
